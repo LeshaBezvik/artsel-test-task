@@ -95,13 +95,19 @@ document.addEventListener("DOMContentLoaded", function () {
       if (email === "") {
         errorMessages.innerHTML += "Please complete this email field.";
         valid = false;
-      } else if (!validateEmail(email)) {
-        errorMessages.innerHTML = "This email does not seem to look right.";
-        const emailInput = document.getElementById("email");
-        const emailLabel = document.getElementById("email-label");
-        emailInput.classList.add("invalid");
-        emailLabel.classList.add("invalid");
-        valid = false;
+      } else if (email !== "") {
+        if (!validateEmail(email)) {
+            errorMessages.innerHTML = "This email does not seem to look right.";
+            const emailInput = document.getElementById("email");
+            const emailLabel = document.getElementById("email-label");
+            const emailErrorText = document.getElementById("emailError");
+
+            emailInput.classList.add("invalid");
+            emailLabel.classList.add("invalid");
+            emailErrorText.classList.add("show");
+
+            valid = false;
+        }
       }
 
 
