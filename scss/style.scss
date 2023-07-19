@@ -528,12 +528,22 @@ form#contactForm {
     flex-direction: column;
 }
 
-input#name, input#email {
+input#name, input#email, textarea#message {
     padding: 18px 24px;
     border: 2px solid transparent;
     border-radius: 16px;
     margin-bottom: 32px;
     transition: .5s;
+    color: #A9A9A9;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.2px; 
+}
+
+textarea#message {
+    height: 144px;
 }
 
 input#name::placeholder,
@@ -547,8 +557,6 @@ textarea#message::placeholder {
     letter-spacing: -0.2px; 
 }
 
-
-
 label {
     color: var(--teddy-graphics-sea-bed, #31363D);
     font-family: 'Lato', sans-serif;
@@ -556,15 +564,6 @@ label {
     font-weight: 400;
     margin-bottom: 8px;
     line-height: 24px; /* 120% */
-}
-
-textarea#message {
-    height: 144px;
-    padding: 18px 24px;
-    border-radius: 16px;
-    margin-bottom: 24px;
-    border: 2px solid transparent;
-    transition: .5s;
 }
 
 input#name:hover, 
@@ -601,6 +600,7 @@ button#submitBtn {
     font-weight: 900;
     line-height: 22px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 button#submitBtn:disabled {
@@ -636,6 +636,12 @@ button#submitBtn:disabled {
 #name.accept,
 #message.accept {
     color: #008751;
+}
+
+.submit-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 @media(max-width: 992px){
