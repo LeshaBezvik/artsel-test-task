@@ -106,9 +106,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (message === "") {
         errorMessages.innerHTML += "Enter your message.";
-        valid = false;
+        
       } else {
           document.getElementById("message").classList.add("accept");
+      }
+
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (recaptchaResponse === "") {
+        valid = false;
       }
   
       if (valid) {
