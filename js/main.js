@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const recaptchaResponse = grecaptcha.getResponse();
 
 
-      if (name !== "" && email !== "" && message !== "" && recaptchaResponse !== "") {
+      if (name !== "" && email !== "" && validateEmail(email) && message !== "" && recaptchaResponse !== "") {
         submitBtn.disabled = false;
       } else {
         submitBtn.disabled = true;
