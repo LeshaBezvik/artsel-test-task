@@ -141,10 +141,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const recaptchaResponse = grecaptcha.getResponse();
 
 
-      if (name !== "" && email !== "" && message !== "" && recaptchaResponse !== "") {
+      if (name !== "" && email !== "" && message !== "") {
         submitBtn.disabled = false;
       } else {
-        submitBtn.disabled = true;
+        if(recaptchaResponse !== ""){
+            submitBtn.disabled = true;
+        }
       }
     });
   });
