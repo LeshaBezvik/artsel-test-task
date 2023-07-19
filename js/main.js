@@ -102,14 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
         emailInput.classList.add("invalid");
         emailLabel.classList.add("invalid");
         valid = false;
-      } else if(email === "" && !validateEmail(email) ) {
-        errorMessages.innerHTML = "This email does not seem to look right.";
-        const emailInput = document.getElementById("email");
-        const emailLabel = document.getElementById("email-label");
-        emailInput.classList.add("invalid");
-        emailLabel.classList.add("invalid");
-        valid = false;
       }
+
+
 
       if (message === "") {
         errorMessages.innerHTML += "Enter your message.";
@@ -140,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const recaptchaResponse = grecaptcha.getResponse();
 
 
-      if (name !== "" && email !== "" && validateEmail(email) && message !== "" && recaptchaResponse !== "") {
+      if (name !== "" && email !== "" && message !== "" && recaptchaResponse !== "") {
         submitBtn.disabled = false;
       } else {
         submitBtn.disabled = true;
