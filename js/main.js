@@ -102,6 +102,13 @@ document.addEventListener("DOMContentLoaded", function () {
         emailInput.classList.add("invalid");
         emailLabel.classList.add("invalid");
         valid = false;
+      } else if(email === "" && !validateEmail(email) ) {
+        errorMessages.innerHTML = "This email does not seem to look right.";
+        const emailInput = document.getElementById("email");
+        const emailLabel = document.getElementById("email-label");
+        emailInput.classList.add("invalid");
+        emailLabel.classList.add("invalid");
+        valid = false;
       }
 
       if (message === "") {
