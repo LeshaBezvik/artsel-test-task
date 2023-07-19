@@ -649,3 +649,15 @@ button#submitBtn:disabled {
         max-width: 80%;
     }
 }
+
+@media(max-width: 767px) {
+    .submit-wrapper {
+        flex-direction: column;
+    }
+    .g-recaptcha {
+        margin-bottom: 20px;
+    }
+    button#submitBtn {
+        margin-left: 0;
+    }
+}
