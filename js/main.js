@@ -130,9 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
+      const recaptchaResponse = grecaptcha.getResponse();
 
 
-      if (name !== "" && email !== "" && message !== "") {
+      if (name !== "" && email !== "" && message !== "" && recaptchaResponse !== "") {
         submitBtn.disabled = false;
       } else {
         submitBtn.disabled = true;
