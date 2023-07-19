@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LexQDgnAAAAAHEagpPhn9IFhZmc1xnhHsDyTkwo"></script>
 </head>
 <body>
 
@@ -308,14 +308,14 @@
 
     <script>
         function onClick(e) {
-            e.preventDefault();
-            grecaptcha.enterprise.ready(async () => {
-            const token = await grecaptcha.enterprise.execute('6LdvtTcnAAAAAPIEvp511U-O1Oh0nXnSqTQn52vm', {action: 'LOGIN'});
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LexQDgnAAAAAHEagpPhn9IFhZmc1xnhHsDyTkwo', {action: 'LOGIN'});
             // IMPORTANT: The 'token' that results from execute is an encrypted response sent by
             // reCAPTCHA Enterprise to the end user's browser.
             // This token must be validated by creating an assessment.
             // See https://cloud.google.com/recaptcha-enterprise/docs/create-assessment
-            });
+          });
         }
     </script>
 
